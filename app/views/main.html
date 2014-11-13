@@ -1,0 +1,12 @@
+<div class="bootstrap" ng-init="getVideos()">
+    <accordion close-others="oneAtATime">
+        <accordion-group ng-repeat="key in keys">
+            <accordion-heading>
+                {{ getVideoDetail(key).title }}
+            </accordion-heading>
+            <div class="embed-responsive embed-responsive-4by3">
+                <div embed-video="{{getVideoDetail(key).videoId}}"></div>
+            </div>
+        </accordion-group>
+    </accordion>
+</div>
